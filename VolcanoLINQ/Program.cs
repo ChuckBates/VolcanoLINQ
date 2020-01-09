@@ -6,6 +6,7 @@ using VolcanoLINQ.Base;
 using VolcanoLINQ.Filter;
 using VolcanoLINQ.Flatten;
 using VolcanoLINQ.Order;
+using VolcanoLINQ.Performance;
 using VolcanoLINQ.Projection;
 using VolcanoLINQ.Quantification;
 using VolcanoLINQ.Syntax;
@@ -22,7 +23,7 @@ namespace VolcanoLINQ
             //
             // SyntaxExamples.CompareSyntaxEqualityExample(volcanoes);
             // SyntaxExamples.MeasureSyntaxPerformanceSimpleExample(volcanoes);
-            SyntaxExamples.MeasureSyntaxPerformanceComplexExample(volcanoes);
+            // SyntaxExamples.MeasureSyntaxPerformanceComplexExample(volcanoes);
             //
             // OrderExamples.OrderByDescendingExample(volcanoes);
             //
@@ -33,6 +34,8 @@ namespace VolcanoLINQ
             // ProjectionExamples.SelectExample(volcanoes);
             //
             // FlattenExamples.SelectManyExample(volcanoes);
+
+            PerformanceExamples.CompareToLoopsExample(volcanoes);
             Console.ReadKey();
         }
 
