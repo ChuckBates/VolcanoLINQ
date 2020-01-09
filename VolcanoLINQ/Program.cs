@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using VolcanoLINQ.Base;
-using VolcanoLINQ.Where;
+using VolcanoLINQ.Filter;
 
 namespace VolcanoLINQ
 {
@@ -12,11 +12,8 @@ namespace VolcanoLINQ
         static void Main(string[] args)
         {
             var volcanoes = Load();
-            var results = WhereExample.WhereRecentEruption(volcanoes);
-            foreach (var result in results)
-            {
-                Console.WriteLine($"volcano {result.Name} erupted in {result.LastEruptionYear}");
-            }
+//            FilterExamples.WhereExample(Load());
+            FilterExamples.FirstOrDefaultExample(volcanoes);
             Console.ReadKey();
         }
 
