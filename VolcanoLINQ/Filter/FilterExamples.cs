@@ -16,7 +16,25 @@ namespace VolcanoLINQ.Filter
             }
         }
 
+        public static void FirstExample(IEnumerable<Volcano> volcanoes)
+        {
+            var result = volcanoes.First(v => v.Type == "Stratovolcano");
+            Console.WriteLine($"First stratovolcano: {result.Name}");
+        }
+
+        public static void LastExample(IEnumerable<Volcano> volcanoes)
+        {
+            var result = volcanoes.Last(v => v.Type == "Stratovolcano");
+            Console.WriteLine($"Last stratovolcano: {result.Name}");
+        }
+
         public static void FirstOrDefaultExample(IEnumerable<Volcano> volcanoes)
+        {
+            var result = volcanoes.FirstOrDefault(v => v.Name == "Pompeii");
+            Console.WriteLine($"Pompeii volcano result is null: {result == null}");
+        }
+
+        public static void LastOrDefaultExample(IEnumerable<Volcano> volcanoes)
         {
             var result = volcanoes.FirstOrDefault(v => v.Name == "Pompeii");
             Console.WriteLine($"Pompeii volcano result is null: {result == null}");
