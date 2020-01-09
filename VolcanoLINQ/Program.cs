@@ -5,6 +5,7 @@ using System.Linq;
 using VolcanoLINQ.Base;
 using VolcanoLINQ.Filter;
 using VolcanoLINQ.Order;
+using VolcanoLINQ.Projection;
 using VolcanoLINQ.Quantification;
 using VolcanoLINQ.Syntax;
 
@@ -24,7 +25,9 @@ namespace VolcanoLINQ
 
 //            QuantificationExamples.AnyExample(volcanoes);
 //            QuantificationExamples.AllExample(volcanoes);
-            QuantificationExamples.CountExample(volcanoes);
+//            QuantificationExamples.CountExample(volcanoes);
+
+            ProjectionExamples.SelectExample(volcanoes);
             Console.ReadKey();
         }
 

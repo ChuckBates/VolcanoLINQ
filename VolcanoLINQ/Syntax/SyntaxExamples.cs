@@ -15,7 +15,8 @@ namespace VolcanoLINQ.Syntax
             var areEqual = queryResults.Count() == methodResults.Count() &&
                            (!queryResults.Except(methodResults).Any() || !methodResults.Except(queryResults).Any());
 
-            Console.WriteLine($"Results of query and method syntax are equal: {areEqual}");
+            var sequenceEqual = queryResults.SequenceEqual(methodResults);
+            Console.WriteLine($"Results of query and method syntax are equal: {sequenceEqual}");
         }
 
         static List<Volcano> MethodWhereExample(IEnumerable<Volcano> volcanoes)
