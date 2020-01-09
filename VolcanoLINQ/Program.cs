@@ -4,6 +4,7 @@ using System.IO;
 using System.Linq;
 using VolcanoLINQ.Base;
 using VolcanoLINQ.Filter;
+using VolcanoLINQ.Syntax;
 
 namespace VolcanoLINQ
 {
@@ -13,7 +14,8 @@ namespace VolcanoLINQ
         {
             var volcanoes = Load();
 //            FilterExamples.WhereExample(Load());
-            FilterExamples.FirstOrDefaultExample(volcanoes);
+//            FilterExamples.FirstOrDefaultExample(volcanoes);
+            SyntaxExamples.CompareSyntax(volcanoes);
             Console.ReadKey();
         }
 
