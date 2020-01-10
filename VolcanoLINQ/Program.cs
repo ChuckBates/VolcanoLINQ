@@ -19,20 +19,20 @@ namespace VolcanoLINQ
         static void Main(string[] args)
         {
             var volcanoes = Load();
-//            FilterExamples.LastOrDefaultExample(volcanoes);
+            // FilterExamples.LastOrDefaultExample(volcanoes);
             
             // SyntaxExamples.MeasureSyntaxPerformanceComplexExample(volcanoes);
-//            
+            
             // OrderExamples.OrderByAscendingExample(volcanoes);
-//        
-//            QuantificationExamples.AnyExample(volcanoes);
-//        
-            ProjectionExamples.SelectWithIndexExample(volcanoes);
-//        
-//            FlattenExamples.SelectManyResultSelectorExample(volcanoes);
+        
+            // QuantificationExamples.AnyExample(volcanoes);
+        
+            // ProjectionExamples.SelectWithIndexExample(volcanoes);
+        
+            // FlattenExamples.SelectManyResultSelectorExample(volcanoes);
 
-//            GroupExamples.GroupByProjectionExample(volcanoes);
-//
+            // GroupExamples.GroupByProjectionExample(volcanoes);
+
             // PerformanceExamples.CompareToLoopsExample(volcanoes);
 
             Console.ReadKey();
