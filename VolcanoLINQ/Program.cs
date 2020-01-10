@@ -21,19 +21,19 @@ namespace VolcanoLINQ
             var volcanoes = Load();
 //            FilterExamples.LastOrDefaultExample(volcanoes);
             
-//            SyntaxExamples.CompareSyntaxEqualityExample(volcanoes);
+            // SyntaxExamples.MeasureSyntaxPerformanceComplexExample(volcanoes);
 //            
-//            OrderExamples.OrderByDescendingExample(volcanoes);
+            // OrderExamples.OrderByAscendingExample(volcanoes);
 //        
 //            QuantificationExamples.AnyExample(volcanoes);
 //        
-//            ProjectionExamples.SelectExample(volcanoes);
+            ProjectionExamples.SelectWithIndexExample(volcanoes);
 //        
-            FlattenExamples.SelectManyResultSelectorExample(volcanoes);
+//            FlattenExamples.SelectManyResultSelectorExample(volcanoes);
 
 //            GroupExamples.GroupByProjectionExample(volcanoes);
 //
-//            PerformanceExamples.CompareToLoopsExample(volcanoes);
+            // PerformanceExamples.CompareToLoopsExample(volcanoes);
 
             Console.ReadKey();
         }

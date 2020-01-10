@@ -7,7 +7,7 @@ namespace VolcanoLINQ.Quantification
 {
     public static class QuantificationExamples
     {
-        public static void AnyExample(IEnumerable<Volcano> volcanoes)
+        public static void AnyExample(IList<Volcano> volcanoes)
         {
             var result = volcanoes.Any(v => v.Type == "Stratovolcano");
             Console.WriteLine($"Are there any of type Stratovolcano: {result}");
@@ -16,7 +16,7 @@ namespace VolcanoLINQ.Quantification
             Console.WriteLine($"Are there any of type Supervolcano: {result}");
         }
 
-        public static void AllExample(IEnumerable<Volcano> volcanoes)
+        public static void AllExample(IList<Volcano> volcanoes)
         {
             var result = volcanoes.All(v => v.PopulationClose > 0);
             Console.WriteLine($"Are all volcanoes close to populations: {result}");
@@ -25,7 +25,7 @@ namespace VolcanoLINQ.Quantification
             Console.WriteLine($"Are all volcanoes typed: {result}");
         }
 
-        public static void CountExample(IEnumerable<Volcano> volcanoes)
+        public static void CountExample(IList<Volcano> volcanoes)
         {
             var result = volcanoes.Count(v => v.Type == "Stratovolcano");
             Console.WriteLine($"There are {result} known stratovolcanoes");

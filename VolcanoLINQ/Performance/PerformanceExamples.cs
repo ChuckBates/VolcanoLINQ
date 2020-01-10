@@ -8,7 +8,7 @@ namespace VolcanoLINQ.Performance
 {
     public static class PerformanceExamples
     {
-        public static void CompareToLoopsExample(IEnumerable<Volcano> volcanoes)
+        public static void CompareToLoopsExample(IList<Volcano> volcanoes)
         {
             var stopwatch = Stopwatch.StartNew();
             var linqResults = volcanoes.Where(v => v.PopulationClose > 1000 && v.LastEruptionYear > DateTime.UtcNow.Year - 5)
@@ -27,19 +27,22 @@ namespace VolcanoLINQ.Performance
                 }
             }
 
-            loopResults.Sort(delegate((string Name, int PopulationClose, string Country, int LastEruptionYear) x, (string Name, int PopulationClose, string Country, int LastEruptionYear) y)
-            {
-                if (x.PopulationClose > y.PopulationClose)
-                {
-                    return -1;
-                }
-                return 1;
-            });
+            loopResults.Sort(
+                delegate(
+                    (string Name, int PopulationClose, string Country, int LastEruptionYear) x, 
+                    (string Name, int PopulationClose, string Country, int LastEruptionYear) y)
+                    {
+                        if (x.PopulationClose > y.PopulationClose)
+                        {
+                            return -1;
+                        }
+                        return 1;
+                    });
             var loopTime = stopwatch.ElapsedMilliseconds;
 
             Console.WriteLine($"Results of linq and loop syntax are equal: {linqResults.SequenceEqual(loopResults)}");
-            Console.WriteLine($"LINQ execution time: {linqTime}");
-            Console.WriteLine($"Loop execution time: {loopTime}");
+            Console.WriteLine($"LINQ execution time: {linqTime} ms");
+            Console.WriteLine($"Loop execution time: {loopTime} ms");
         }
     }
 }
