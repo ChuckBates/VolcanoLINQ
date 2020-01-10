@@ -20,23 +20,29 @@ namespace VolcanoLINQ
         static void Main(string[] args)
         {
             var volcanoes = Load();
-            // FilterExamples.LastOrDefaultExample(volcanoes);
+
+//            FilterExamples.WhereExample(volcanoes);
+//            FilterExamples.FirstOrDefaultExample(volcanoes);
+
+//            OrderExamples.OrderByDescendingExample(volcanoes);
+
+//            QuantificationExamples.AnyExample(volcanoes);
+//            QuantificationExamples.CountExample(volcanoes);
             
-            // SyntaxExamples.MeasureSyntaxPerformanceComplexExample(volcanoes);
-            
-            // OrderExamples.OrderByAscendingExample(volcanoes);
-        
-            // QuantificationExamples.AnyExample(volcanoes);
-        
-            // ProjectionExamples.SelectWithIndexExample(volcanoes);
-        
-            // FlattenExamples.SelectManyResultSelectorExample(volcanoes);
+//            GroupExamples.GroupByExample(volcanoes);
 
-            // GroupExamples.GroupByProjectionExample(volcanoes);
+//            ProjectionExamples.SelectExample(volcanoes);
+        
+//            FlattenExamples.SelectManyExample(volcanoes);
 
-            // PerformanceExamples.CompareToLoopsExample(volcanoes);
+//            SyntaxExamples.CompareSyntaxEqualityExample(volcanoes);
+//            SyntaxExamples.MeasureSyntaxPerformanceSimpleExample(volcanoes);
+//            SyntaxExamples.MeasureSyntaxPerformanceComplexExample(volcanoes);
 
-            DeferredExecutionExamples.DeferredExecutionExample(volcanoes);
+//            PerformanceExamples.CompareToLoopsExample(volcanoes);
+
+//            DeferredExecutionExamples.DeferredExecutionExample(volcanoes);
+//            DeferredExecutionExamples.DeferredExecutionThrowExample(volcanoes);
 
             Console.ReadKey();
         }
