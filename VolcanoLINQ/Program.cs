@@ -29,7 +29,7 @@ namespace VolcanoLINQ
 //        
 //            ProjectionExamples.SelectExample(volcanoes);
 //        
-            FlattenExamples.SelectManyExample(volcanoes);
+            FlattenExamples.SelectManyResultSelectorExample(volcanoes);
 
 //            GroupExamples.GroupByProjectionExample(volcanoes);
 //
