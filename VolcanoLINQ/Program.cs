@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using VolcanoLINQ.Base;
+using VolcanoLINQ.Execution;
 using VolcanoLINQ.Filter;
 using VolcanoLINQ.Flatten;
 using VolcanoLINQ.Group;
@@ -34,6 +35,8 @@ namespace VolcanoLINQ
             // GroupExamples.GroupByProjectionExample(volcanoes);
 
             // PerformanceExamples.CompareToLoopsExample(volcanoes);
+
+            DeferredExecutionExamples.DeferredExecutionExample(volcanoes);
 
             Console.ReadKey();
         }
