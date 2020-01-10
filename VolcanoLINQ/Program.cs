@@ -5,6 +5,7 @@ using System.Linq;
 using VolcanoLINQ.Base;
 using VolcanoLINQ.Filter;
 using VolcanoLINQ.Flatten;
+using VolcanoLINQ.Group;
 using VolcanoLINQ.Order;
 using VolcanoLINQ.Performance;
 using VolcanoLINQ.Projection;
@@ -18,24 +19,22 @@ namespace VolcanoLINQ
         static void Main(string[] args)
         {
             var volcanoes = Load();
-            // FilterExamples.WhereExample(volcanoes);
-            // FilterExamples.FirstOrDefaultExample(volcanoes);
-            //
-            // SyntaxExamples.CompareSyntaxEqualityExample(volcanoes);
-            // SyntaxExamples.MeasureSyntaxPerformanceSimpleExample(volcanoes);
-            // SyntaxExamples.MeasureSyntaxPerformanceComplexExample(volcanoes);
-            //
-            // OrderExamples.OrderByDescendingExample(volcanoes);
-            //
-            // QuantificationExamples.AnyExample(volcanoes);
-            // QuantificationExamples.AllExample(volcanoes);
-            // QuantificationExamples.CountExample(volcanoes);
-            //
-            // ProjectionExamples.SelectExample(volcanoes);
-            //
-            // FlattenExamples.SelectManyExample(volcanoes);
+//            FilterExamples.LastOrDefaultExample(volcanoes);
+            
+//            SyntaxExamples.CompareSyntaxEqualityExample(volcanoes);
+//            
+//            OrderExamples.OrderByDescendingExample(volcanoes);
+//        
+//            QuantificationExamples.AnyExample(volcanoes);
+//        
+//            ProjectionExamples.SelectExample(volcanoes);
+//        
+            FlattenExamples.SelectManyExample(volcanoes);
 
-            PerformanceExamples.CompareToLoopsExample(volcanoes);
+//            GroupExamples.GroupByProjectionExample(volcanoes);
+//
+//            PerformanceExamples.CompareToLoopsExample(volcanoes);
+
             Console.ReadKey();
         }
 
